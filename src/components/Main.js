@@ -9,9 +9,8 @@ export default function Main({recipes, setSearch, getRecipes}){
       <section className='recipe-view'>
         <h2>Oppskrifter</h2>
           {recipes.map((recipe, index) => (
-              <Link key={index} to={recipe?.recipe?.label.replace(/\s/g, "-").toLowerCase()}>
-                  <RecipeCard title={recipe?.recipe?.label} /> 
-              </Link>
+                  <RecipeCard key={index} title={recipe?.recipe?.label} img={recipe?.recipe?.image} time={recipe?.recipe?.totalTime} slug={recipe?.recipe?.label.replace(/\s/g, "-").toLowerCase()} /> 
+             
           ))}
         </section>
       </>
