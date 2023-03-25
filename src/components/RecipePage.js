@@ -8,6 +8,12 @@ export default function RecipePage({recipes}){
         <section>
             <h1>{recipe?.recipe.label}</h1>
             <img src={recipe?.recipe?.image} alt={recipe?.recipe.label} />
+
+            <ul>
+                {recipe?.recipe.ingredients.map((ing, index) => (
+                    <li key={index}>{ing.text}</li> 
+                 ))}
+            </ul>
         </section>
     )
 }
