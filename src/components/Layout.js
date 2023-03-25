@@ -7,6 +7,7 @@ export default function Layout(){
             <Link to="/">
                 <h1>Matprat</h1>
             </Link>
+            
           </header>
           <main>
             <Outlet />

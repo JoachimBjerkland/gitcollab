@@ -13,15 +13,17 @@ function App() {
 
   const getRecipes = async() =>{
     //Pass på at ID og KEY kommer fra riktig app i edmam, hvis dere har registrert at dere skal bruke recipe api så må app id og key være koblet til det og ikke food databse eller omvendt
+<<<<<<< HEAD
     const response = await fetch(`https://api.edamam.com/search?q=${search}&app_id=72ba8330&app_key=50692df47057f17e30a159d3e18ecf55`)
+=======
+    const response = await fetch(`https://api.edamam.com/search?q=${search}&app_id=52a150ec&app_key=ced7b20160d07136b580dc435e358b9f`)
+>>>>>>> bb0879b543146cadc06b8a8f2dce657834801718
     const data = await response.json()
     console.log(data.hits)
     setRecipes(data.hits)
 
   
   }
-  console.log("sjekk", recipes)
-
   useEffect(() =>{
     getRecipes()
   },[])
